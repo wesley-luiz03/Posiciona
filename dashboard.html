@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Posiciona | Acesso Restrito</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-dark: #050c1a;
+            --card-dark: #0a192f;
+            --accent: #cda434;
+            --text: #f4f7f6;
+        }
+        body { background: var(--bg-dark); color: var(--text); font-family: 'Inter', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        
+        /* Estilo do Login */
+        #login-box { background: var(--card-dark); padding: 40px; border-radius: 20px; border: 1px solid rgba(205, 164, 52, 0.3); text-align: center; width: 100%; max-width: 400px; }
+        #login-box input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: none; background: #112240; color: white; box-sizing: border-box; }
+        #login-box button { width: 100%; padding: 12px; background: var(--accent); color: #0a192f; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        #login-box button:hover { transform: scale(1.02); opacity: 0.9; }
+
+        /* Estilo do Dashboard (Escondido por padrão) */
+        #dashboard-content { display: none; width: 90%; max-width: 1000px; padding: 50px 0; }
+        .chart-card { background: var(--card-dark); padding: 30px; border-radius: 20px; border: 1px solid rgba(205, 164, 52, 0.2); }
+        h1 span { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <div id="login-box">
+        <h2 style="color: var(--accent)">Posiciona<span>.</span></h2>
+        <p>Acesso exclusivo para sócios</p>
+        <input type="text" id="user" placeholder="Usuário">
+        <input type="password" id="pass" placeholder="Senha">
+        <button onclick="fazerLogin()">Entrar no Painel</button>
+        <p id="error-msg" style="color: #ff4d4d; font-size: 0.8rem; margin-top: 10px; display: none;">Dados incorretos.</p>
+    </div>
+
+    <div id="dashboard-content">
+        <h1>Painel de Performance <span>Posiciona</span></h1>
+        <div class="chart-card">
+            <h3 style="color: var(--accent)">Interesse por Pacote</h3>
+            <canvas id="planosChart"></canvas>
+        </div>
+        <button onclick="logout()" style="margin-top: 20px; background: none; border: 1px solid var(--accent); color: var(--accent); padding: 8px 15px; border-radius: 5px; cursor: pointer;">Sair</button>
+    </div>
+
+    <script>
+        async function fazerLogin() {
+            const user = document.getElementById('user').value;
+            const pass = document.getElementById('pass').value;
+
+            // No dashboard.html, mude esta linha:
+            const response = await fetch('https://posiciona-backend.onrender.com/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username: user, password: pass })
+            });
+
+            if (response.ok) {
+                sessionStorage.setItem('logado', 'true');
+                mostrarDashboard();
+            } else {
+                document.getElementById('error-msg').style.display = 'block';
+            }
+        }
+
+        function mostrarDashboard() {
+            document.getElementById('login-box').style.display = 'none';
+            document.getElementById('dashboard-content').style.display = 'block';
+            carregarGrafico();
+        }
+
+        function carregarGrafico() {
+            const ctx = document.getElementById('planosChart').getContext('2d');
+            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            gradient.addColorStop(0, '#0a192f');
+            gradient.addColorStop(1, '#cda434');
+
+            const meuGrafico = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Essencial', 'Autoridade', 'Premium'],
+                    datasets: [{
+                        label: 'Cliques',
+                        data: [0, 0, 0],
+                        backgroundColor: gradient,
+                        borderRadius: 10
+                    }]
+                },
+                options: { scales: { y: { beginAtZero: true, grid: { color: '#112240' } } } }
+            });
+
+            async function carregarDados() {
+                const res = await fetch('https://posiciona-backend.onrender.com/api/metrics');
+                const dados = await res.json();
+                meuGrafico.data.datasets[0].data = [
+                    dados.pacote_essencial || 0,
+                    dados.pacote_autoridade || 0,
+                    dados.pacote_premium || 0
+                ];
+                meuGrafico.update();
+            }
+            carregarDados();
+        }
+
+        function logout() {
+            sessionStorage.removeItem('logado');
+            window.location.reload();
+        }
+
+        // Verifica se já estava logado ao abrir a página
+        if (sessionStorage.getItem('logado') === 'true') {
+            mostrarDashboard();
+        }
+    </script>
+</body>
+</html>
