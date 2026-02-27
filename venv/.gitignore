@@ -1,0 +1,13 @@
+# Ambientes virtuais (Python)
+venv/
+.venv/
+backend/venv/
+
+# Banco de dados local (Não queremos que nossos dados de teste subam para o Git)
+backend/*.db
+
+# Arquivos do Sistema e VS Code
+.vscode/
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,254 +1,533 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
+    <!-- Meta base -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Posiciona | Estratégia e Artes Digitais para Advogados e Contadores</title>
-    <meta name="description" content="A Posiciona cria artes estratégicas e posicionamento digital de autoridade para escritórios de advocacia e contabilidade. Transforme seu conhecimento em contratos.">
-    <meta name="keywords" content="artes digitais, marketing jurídico, marketing contábil, posicionamento digital, social media advocacia">
+
+    <!-- SEO -->
+    <title>Posiciona | Estratégia e Artes Digitais para Empresas</title>
+    <meta
+        name="description"
+        content="A Posiciona cria estratégias, conteúdos e posicionamento visual para empresas que desejam fortalecer sua presença digital e gerar mais autoridade."
+    >
+    <meta
+        name="keywords"
+        content="marketing digital, posicionamento digital, conteúdo estratégico, branding, social media"
+    >
     <meta name="author" content="Wesley Luiz">
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://posiciona.vercel.app/"> <meta property="og:title" content="Posiciona | Estratégia e Artes Digitais">
-    <meta property="og:description" content="Artes que transmitem autoridade para nichos de alta confiança. Conheça nossos pacotes.">
-    <meta property="og:image" content="assets/img/og-image.jpg"> <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    
+    <meta property="og:url" content="https://posiciona.vercel.app/">
+    <meta property="og:title" content="Posiciona | Estratégia e Artes Digitais">
+    <meta
+        property="og:description"
+        content="Soluções digitais estratégicas para empresas que querem crescer com autoridade."
+    >
+    <meta property="og:image" content="assets/img/og-image.jpg">
+
+    <!-- Ícones e estilos -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
 </head>
 <body>
-    
+    <!-- Header -->
     <header id="header">
-        <nav class="container nav-wrapper">
-            <a href="#" class="logo">POSICIONA<span>.</span></a>
+        <nav class="container nav-wrapper" aria-label="Navegação principal">
+            <a href="#home" class="logo-text">POSICIONA</a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menu de navegação"
+            >
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#portfolio">Nossas entregas</a></li>
                 <li><a href="#planos">Planos</a></li>
                 <li><a href="#depoimentos">Depoimentos</a></li>
             </ul>
-            <a href="https://wa.me/5581973348350" class="btn-menu" onclick="iniciarContato(event, this.href)">Orçamento</a>
+
+            <a
+                href="https://wa.me/5583987917915"
+                class="btn-menu"
+                onclick="iniciarContato(event, this.href)"
+            >
+                Orçamento
+            </a>
         </nav>
     </header>
 
+    <!-- Conteúdo principal -->
     <main>
+        <!-- Hero -->
         <section id="home" class="hero">
             <div class="container hero-content">
-                <h1>Posicione sua marca com <span>autoridade digital</span>.</h1>
-                <p>Artes estratégicas para advocacia e contabilidade que transformam seguidores em clientes.</p>
-                <div class="cta-buttons">
-                    <a href="#portfolio" class="btn-secondary">Ver Portfólio</a>
-                    <a href="https://wa.me/5581973348350" class="btn-whatsapp" onclick="iniciarContato(event, this.href)">
-                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
-                    </a>
-                </div>
-            </div>
-        </section>
+                <div class="hero-text">
+                    <span class="hero-badge">Soluções digitais para empresas</span>
 
-        <section id="servicos" class="container py-80">
-            <div class="section-header">
-                <h2 class="section-title">Soluções Estratégicas</h2>
-                <p class="section-subtitle">Transformamos o seu conhecimento técnico em autoridade digital e novos negócios.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
-                    <h3>Posicionamento de Autoridade</h3>
-                    <p>Planejamento que traduz sua expertise jurídica ou contábil para o digital, atraindo o cliente certo.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-video"></i></div>
-                    <h3>Conteúdo Dinâmico</h3>
-                    <p>Direcionamento de gravação e roteiros estratégicos para Reels e Stories com alto engajamento.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-bullseye"></i></div>
-                    <h3>Gestão de Performance</h3>
-                    <p>Tráfego pago integrado com funil de vendas para garantir a chegada de novos leads qualificados.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-pen-nib"></i></div>
-                    <h3>Copywriting Estratégica</h3>
-                    <p>Legendas e roteiros com gatilhos mentais específicos para converter o seguidor em contrato fechado.</p>
-                </div>
-            </div>
-        </section>
+                    <h1>
+                        Transformamos presença digital em
+                        <span>autoridade que gera clientes</span>.
+                    </h1>
 
-        <section id="portfolio" class="container py-80">
-            <div class="section-header">
-                <h2 class="section-title">Nosso Portfólio</h2>
-                <p class="section-subtitle">Conheça alguns dos projetos que elevaram o posicionamento dos nossos parceiros.</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x400" alt="Post de Advocacia">
-                    <div class="portfolio-overlay">
-                        <span>Postagem Estratégica</span>
-                        <p>Direito Civil</p>
+                    <p>
+                        A Posiciona cria estratégias, conteúdos e posicionamento visual
+                        para empresas que querem crescer com mais profissionalismo,
+                        clareza e resultado.
+                    </p>
+
+                    <div class="cta-buttons">
+                        <a
+                            href="assets/pdf/apresentacao-posiciona.pdf"
+                            class="btn-secondary"
+                            download
+                        >
+                            Apresentação Institucional
+                        </a>
+
+                        <a
+                            href="https://wa.me/5583987917915"
+                            class="btn-whatsapp"
+                            onclick="iniciarContato(event, this.href)"
+                        >
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            Falar no WhatsApp
+                        </a>
                     </div>
                 </div>
-                <div class="portfolio-item story">
-                    <img src="https://via.placeholder.com/400x600" alt="Story Contabilidade">
-                    <div class="portfolio-overlay">
-                        <span>Story Dinâmico</span>
-                        <p>Consultoria Contábil</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x400" alt="Identidade Visual">
-                    <div class="portfolio-overlay">
-                        <span>Branding Premium</span>
-                        <p>Escritório Jurídico</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/400x400" alt="Reels Estratégico">
-                    <div class="portfolio-overlay">
-                        <span>Vídeos de Autoridade</span>
-                        <p>Estratégia de Reels</p>
+
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <span class="hero-card-label">Posicionamento estratégico</span>
+
+                        <h3>Sua marca com mais clareza, consistência e autoridade.</h3>
+
+                        <p>
+                            Design, conteúdo e estratégia alinhados para comunicar valor
+                            e atrair o público certo.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                Identidade visual mais forte
+                            </li>
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                Conteúdo com direção estratégica
+                            </li>
+                            <li>
+                                <i class="fas fa-check" aria-hidden="true"></i>
+                                Presença digital profissional
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="porque-posiciona" class="bg-dark">
+        <!-- Serviços -->
+        <section id="servicos" class="services-section">
             <div class="container py-80">
                 <div class="section-header">
-                    <h2 class="section-title light-text">Por que a Posiciona<span>?</span></h2>
-                    <p class="section-subtitle light-text">Unimos técnica de design com estratégia para nichos de alta autoridade.</p>
+                    <span class="section-badge">Nossas soluções</span>
+                    <h2 class="section-title">Soluções Estratégicas</h2>
+                    <p class="section-subtitle">
+                        Transformamos posicionamento, conteúdo e presença digital em
+                        percepção de valor para a sua marca.
+                    </p>
                 </div>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon"><i class="fas fa-gavel"></i></div>
-                        <div class="feature-text">
-                            <h3>Respeito às Normas</h3>
-                            <p>Conhecemos as diretrizes éticas da OAB e CFC para um marketing seguro.</p>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="icon-box">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
                         </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon"><i class="fas fa-brain"></i></div>
-                        <div class="feature-text">
-                            <h3>Design Inteligente</h3>
-                            <p>Cada elemento visual é pensado para transmitir confiança e seriedade.</p>
+                        <h3>Posicionamento de Autoridade</h3>
+                        <p>
+                            Planejamento estratégico para fortalecer a imagem da sua marca
+                            e atrair o público certo com mais clareza.
+                        </p>
+                        <span class="service-link">Estratégia de marca</span>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="icon-box">
+                            <i class="fas fa-video" aria-hidden="true"></i>
                         </div>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon"><i class="fas fa-handshake"></i></div>
-                        <div class="feature-text">
-                            <h3>Parceria Estratégica</h3>
-                            <p>Atuamos como um braço direito do seu negócio focado em resultados reais.</p>
+                        <h3>Conteúdo Dinâmico</h3>
+                        <p>
+                            Direcionamento criativo para vídeos, reels e stories que
+                            conectam sua comunicação com resultado real.
+                        </p>
+                        <span class="service-link">Conteúdo com direção</span>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="icon-box">
+                            <i class="fas fa-bullseye" aria-hidden="true"></i>
                         </div>
-                    </div>
+                        <h3>Gestão de Performance</h3>
+                        <p>
+                            Campanhas e ações orientadas por objetivo, com foco em
+                            visibilidade, atração e geração de oportunidades.
+                        </p>
+                        <span class="service-link">Foco em resultado</span>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="icon-box">
+                            <i class="fas fa-pen-nib" aria-hidden="true"></i>
+                        </div>
+                        <h3>Copywriting Estratégica</h3>
+                        <p>
+                            Mensagens, legendas e roteiros construídos para comunicar valor
+                            com mais precisão e autoridade.
+                        </p>
+                        <span class="service-link">Comunicação persuasiva</span>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="depoimentos" class="container py-80">
-            <div class="section-header">
-                <h2 class="section-title">O que dizem nossos parceiros</h2>
-                <p class="section-subtitle">A confiança de quem já transformou seu posicionamento digital com a gente.</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p>"A Posiciona entendeu a sobriedade que meu escritório precisava. Transmite a confiança necessária."</p>
-                    <div class="client-info">
-                        <div class="client-details">
-                            <h4>Dr. Ricardo Alves</h4>
-                            <span>Advogado Civilista</span>
-                        </div>
-                    </div>
+        <!-- Entregas -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container py-80">
+                <div class="section-header">
+                    <span class="section-badge">Projetos e resultados visuais</span>
+                    <h2 class="section-title">Nossas entregas</h2>
+                    <p class="section-subtitle">
+                        Veja exemplos visuais de como transformamos estratégia, design e
+                        conteúdo em presença digital mais forte.
+                    </p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p>"Excelente trabalho! Como contadora, eu tinha receio de parecer informal, mas o conteúdo foi impecável."</p>
-                    <div class="client-info">
-                        <div class="client-details">
-                            <h4>Cláudia Souza</h4>
-                            <span>Consultoria Contábil</span>
+
+                <div class="portfolio-grid">
+                    <article class="portfolio-item">
+                        <img
+                            src="assets/img/servico-1.jpg"
+                            alt="Direção de conteúdo"
+                        >
+                        <div class="portfolio-overlay">
+                            <span>Direção Criativa</span>
+                            <p>Conteúdo estratégico para posicionamento digital</p>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="portfolio-item story">
+                        <img
+                            src="assets/img/servico-2.jpg"
+                            alt="Story estratégico"
+                        >
+                        <div class="portfolio-overlay">
+                            <span>Stories e Campanhas</span>
+                            <p>Comunicação visual com foco em conexão e autoridade</p>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <img
+                            src="assets/img/servico-3.jpg"
+                            alt="Branding visual"
+                        >
+                        <div class="portfolio-overlay">
+                            <span>Branding Visual</span>
+                            <p>Identidade mais forte e percepção de valor</p>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <img
+                            src="assets/img/servico-4.jpg"
+                            alt="Posts estratégicos"
+                        >
+                        <div class="portfolio-overlay">
+                            <span>Posts Estratégicos</span>
+                            <p>Design pensado para comunicar com clareza</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="planos" class="container py-80">
-            <h2 class="section-title">Nossos Planos</h2>
-            <div class="pricing-grid">
-                
-                <div class="price-card">
-                    <h3>Essencial</h3>
-                    <div class="price">R$ 500 - 700<span>/mês</span></div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Planejamento mensal</li>
-                        <li><i class="fas fa-check"></i> 8 posts feed</li>
-                        <li><i class="fas fa-check"></i> Legendas estratégicas</li>
-                        <li><i class="fas fa-check"></i> 8 roteiros de stories</li>
-                        <li><i class="fas fa-check"></i> Direcionamento de posicionamento</li>
-                    </ul>
-                    <a href="https://wa.me/5581973348350?text=Olá!+Quero+saber+mais+sobre+o+Pacote+Essencial" class="btn-plan" onclick="iniciarContato(event, this.href)">Escolher Essencial</a>
+        <!-- Diferenciais -->
+        <section id="porque-posiciona" class="why-section">
+            <div class="container py-80">
+                <div class="section-header">
+                    <span class="section-badge section-badge-light">Nosso diferencial</span>
+                    <h2 class="section-title light-text">Por que a Posiciona?</h2>
+                    <p class="section-subtitle light-text">
+                        Unimos estratégia, direção criativa e comunicação visual para
+                        transformar presença digital em percepção de valor.
+                    </p>
                 </div>
 
-                <div class="price-card featured">
-                    <div class="badge">Mais Vendido</div>
-                    <h3>Autoridade</h3>
-                    <div class="price">R$ 1.000<span>/mês</span></div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Planejamento estratégico completo</li>
-                        <li><i class="fas fa-check"></i> 12 posts + Copy estratégica</li>
-                        <li><i class="fas fa-check"></i> Stories semanais</li>
-                        <li><i class="fas fa-check"></i> Direcionamento de gravação</li>
-                        <li><i class="fas fa-check"></i> Relatório e Reunião mensal</li>
-                    </ul>
-                    <a href="https://wa.me/5581973348350?text=Olá!+Quero+saber+mais+sobre+o+Pacote+Autoridade" class="btn-plan" onclick="iniciarContato(event, this.href)">Escolher Autoridade</a>
+                <div class="why-grid">
+                    <article class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-brain" aria-hidden="true"></i>
+                        </div>
+                        <h3>Estratégia antes da estética</h3>
+                        <p>
+                            Cada peça visual é pensada para comunicar posicionamento,
+                            clareza e autoridade, não apenas para “ficar bonita”.
+                        </p>
+                    </article>
+
+                    <article class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-pen-nib" aria-hidden="true"></i>
+                        </div>
+                        <h3>Comunicação com direção</h3>
+                        <p>
+                            Construímos conteúdos, legendas e roteiros que conectam sua
+                            marca ao público certo com mais consistência.
+                        </p>
+                    </article>
+
+                    <article class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        </div>
+                        <h3>Foco em crescimento</h3>
+                        <p>
+                            Nosso trabalho é fortalecer sua presença digital para gerar
+                            mais percepção de valor, confiança e oportunidades.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section id="depoimentos" class="testimonials-section">
+            <div class="container py-80">
+                <div class="section-header">
+                    <span class="section-badge">Prova social</span>
+                    <h2 class="section-title">O que dizem nossos parceiros</h2>
+                    <p class="section-subtitle">
+                        A confiança de quem já contou com a Posiciona para fortalecer sua
+                        presença digital e comunicar mais valor.
+                    </p>
                 </div>
 
-                <div class="price-card">
-                    <h3>Premium</h3>
-                    <div class="price">R$ 1.500<span>/mês</span></div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Gestão completa & Estratégia de funil</li>
-                        <li><i class="fas fa-check"></i> Tráfego pago incluso</li>
-                        <li><i class="fas fa-check"></i> 16+ conteúdos mensais</li>
-                        <li><i class="fas fa-check"></i> Reels estratégicos</li>
-                        <li><i class="fas fa-check"></i> Gestão de autoridade e concorrência</li>
-                    </ul>
-                    <a href="https://wa.me/5581973348350?text=Olá!+Quero+saber+mais+sobre+o+Pacote+Premium" class="btn-plan" onclick="iniciarContato(event, this.href)">Escolher Premium</a>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left" aria-hidden="true"></i>
+                        </div>
+                        <p>
+                            “A Posiciona conseguiu traduzir exatamente o que queríamos
+                            comunicar. O resultado ficou profissional, estratégico e muito
+                            alinhado com a imagem da nossa marca.”
+                        </p>
+                        <div class="client-info">
+                            <div class="client-details">
+                                <h4>Ricardo Alves</h4>
+                                <span>Empresário</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left" aria-hidden="true"></i>
+                        </div>
+                        <p>
+                            “Além da qualidade visual, o que mais me chamou atenção foi a
+                            direção estratégica. Não é só design, existe um raciocínio por
+                            trás de cada entrega.”
+                        </p>
+                        <div class="client-info">
+                            <div class="client-details">
+                                <h4>Cláudia Souza</h4>
+                                <span>Gestora</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left" aria-hidden="true"></i>
+                        </div>
+                        <p>
+                            “Nossa comunicação ficou mais clara, mais forte e mais
+                            profissional. Isso fez diferença na forma como nossa empresa
+                            passou a ser percebida.”
+                        </p>
+                        <div class="client-info">
+                            <div class="client-details">
+                                <h4>Mariana Costa</h4>
+                                <span>Diretora Comercial</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planos -->
+        <section id="planos" class="plans-section">
+            <div class="container py-80">
+                <div class="section-header">
+                    <span class="section-badge">Planos e soluções</span>
+                    <h2 class="section-title">Nossos Planos</h2>
+                    <p class="section-subtitle">
+                        Escolha a solução ideal para o momento da sua empresa e fortaleça
+                        sua presença digital com estratégia, consistência e direção.
+                    </p>
                 </div>
 
+                <div class="pricing-grid">
+                    <article class="price-card">
+                        <h3>Essencial</h3>
+                        <div class="price">R$ 500 - 700<span>/mês</span></div>
+                        <p class="plan-description">
+                            Para empresas que desejam começar a estruturar sua presença
+                            digital com mais clareza.
+                        </p>
+                        <ul>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Planejamento mensal</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> 8 posts para feed</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Legendas estratégicas</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> 8 roteiros de stories</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Direcionamento de posicionamento</li>
+                        </ul>
+                        <a
+                            href="https://wa.me/5583987917915?text=Olá!+Quero+saber+mais+sobre+o+Plano+Essencial"
+                            class="btn-plan"
+                            onclick="iniciarContato(event, this.href)"
+                        >
+                            Escolher Essencial
+                        </a>
+                    </article>
+
+                    <article class="price-card featured">
+                        <div class="badge">Mais escolhido</div>
+                        <h3>Autoridade</h3>
+                        <div class="price">R$ 1.000<span>/mês</span></div>
+                        <p class="plan-description">
+                            Para marcas que querem comunicar valor com mais consistência e
+                            crescer com mais força.
+                        </p>
+                        <ul>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Planejamento estratégico completo</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> 12 posts + copy estratégica</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Stories semanais</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Direcionamento de gravação</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Relatório e reunião mensal</li>
+                        </ul>
+                        <a
+                            href="https://wa.me/5583987917915?text=Olá!+Quero+saber+mais+sobre+o+Plano+Autoridade"
+                            class="btn-plan"
+                            onclick="iniciarContato(event, this.href)"
+                        >
+                            Escolher Autoridade
+                        </a>
+                    </article>
+
+                    <article class="price-card">
+                        <h3>Premium</h3>
+                        <div class="price">R$ 1.500<span>/mês</span></div>
+                        <p class="plan-description">
+                            Para empresas que buscam uma atuação mais completa,
+                            estratégica e orientada a resultado.
+                        </p>
+                        <ul>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Gestão completa + estratégia de funil</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Tráfego pago incluso</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> 16+ conteúdos mensais</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Reels estratégicos</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Gestão de autoridade e concorrência</li>
+                        </ul>
+                        <a
+                            href="https://wa.me/5583987917915?text=Olá!+Quero+saber+mais+sobre+o+Plano+Premium"
+                            class="btn-plan"
+                            onclick="iniciarContato(event, this.href)"
+                        >
+                            Escolher Premium
+                        </a>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-about">
-                <a href="#" class="logo light-text">Posiciona<span>.</span></a>
-                <p>Soluções digitais estratégicas para autoridade de mercado.</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">POSICIONA</a>
+                <p>
+                    Soluções digitais estratégicas para empresas que desejam fortalecer
+                    sua presença, comunicar valor e crescer com mais autoridade no
+                    digital.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#portfolio">Nossas entregas</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contato</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fab fa-whatsapp" aria-hidden="true"></i> (83) 98791-7915</li>
+                    <li><i class="fas fa-envelope" aria-hidden="true"></i> contato@posicionadigital.com.br</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Redes</h4>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a
+                        href="https://www.instagram.com/emiliap.maciel/"
+                        aria-label="Instagram"
+                    >
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://wa.me/5583987917915" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
-            <div class="footer-contact">
-                <h4>Contacto</h4>
-                <p><i class="fab fa-whatsapp"></i> (81) 97334-8350</p>
-                <p><i class="fas fa-envelope"></i> contato@posicionadigital.com.br</p>
-            </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 Posiciona. Desenvolvido por Wesley Luiz.</p>
+            <p>&copy; 2026 Posiciona. Todos os direitos reservados. Desenvolvido por Wesley Luiz.</p>
         </div>
     </footer>
 
+    <!-- Modal -->
     <div id="modalObrigado" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <div class="modal-body">
-                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-check-circle" aria-hidden="true"></i>
                 <h2>Quase lá!</h2>
                 <p>Estamos te redirecionando para o nosso atendimento exclusivo.</p>
                 <div class="loader"></div>
@@ -256,6 +535,18 @@
         </div>
     </div>
 
+    <!-- Botão flutuante -->
+    <a
+        href="https://wa.me/5583987917915"
+        class="whatsapp-float"
+        target="_blank"
+        onclick="iniciarContato(event, this.href)"
+        aria-label="Falar no WhatsApp"
+    >
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,40 +1,130 @@
+function identificarTipoContato(url) {
+    if (url.includes("Essencial")) return "pacote_essencial";
+    if (url.includes("Autoridade")) return "pacote_autoridade";
+    if (url.includes("Premium")) return "pacote_premium";
+
+    return "contato_geral";
+}
+
+function enviarMetricaContato(tipoContato) {
+    return fetch("https://posiciona-backend.onrender.com/api/track", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ evento: tipoContato })
+    });
+}
+
+function obterModalContato() {
+    return document.getElementById("modalObrigado");
+}
+
+function abrirModalContato() {
+    const modal = obterModalContato();
+
+    if (!modal) {
+        return false;
+    }
+
+    modal.style.display = "flex";
+    return true;
+}
+
+function fecharModalContato() {
+    const modal = obterModalContato();
+
+    if (!modal) {
+        return;
+    }
+
+    modal.style.display = "none";
+}
+
+function redirecionarParaContato(url) {
+    setTimeout(() => {
+        window.location.href = url;
+    }, 3000);
+}
+
 function iniciarContato(event, url) {
-    event.preventDefault(); 
-    
-    // Identifica qual plano foi clicado com base na URL ou texto do link
-    let plano = "contato_geral";
-    if (url.includes("Essencial")) plano = "pacote_essencial";
-    if (url.includes("Autoridade")) plano = "pacote_autoridade";
-    if (url.includes("Premium")) plano = "pacote_premium";
+    event.preventDefault();
 
-    // Envia o dado para o seu servidor Python (Back-end)
-    fetch('https://posiciona-backend.onrender.com/api/track', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ evento: plano })
-    })
-    .then(response => console.log("Métrica enviada!"))
-    .catch(error => console.error("Erro ao salvar métrica:", error));
+    const tipoContato = identificarTipoContato(url);
 
-    // Abre o modal de obrigado que criamos antes
-    const modal = document.getElementById('modalObrigado');
-    if (modal) {
-        modal.style.display = 'flex';
-        setTimeout(() => {
-            window.location.href = url;
-        }, 3000);
+    enviarMetricaContato(tipoContato)
+        .then(() => console.log("Métrica enviada!"))
+        .catch((error) => console.error("Erro ao salvar métrica:", error));
+
+    const modalFoiAberto = abrirModalContato();
+
+    if (modalFoiAberto) {
+        redirecionarParaContato(url);
+        return;
     }
-}
-// Fechar no X
-document.querySelector('.close-modal').onclick = function() {
-    document.getElementById('modalObrigado').style.display = 'none';
+
+    window.location.href = url;
 }
 
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+function atualizarEstadoHeader() {
+    const header = document.querySelector("header");
+
+    if (!header) {
+        return;
     }
-});
+
+    const usuarioRolouPagina = window.scrollY > 50;
+    header.classList.toggle("scrolled", usuarioRolouPagina);
+}
+
+function configurarScrollHeader() {
+    window.addEventListener("scroll", atualizarEstadoHeader);
+    atualizarEstadoHeader();
+}
+
+function configurarFechamentoModal() {
+    const botaoFecharModal = document.querySelector(".close-modal");
+
+    if (!botaoFecharModal) {
+        return;
+    }
+
+    botaoFecharModal.addEventListener("click", fecharModalContato);
+}
+
+function fecharMenuMobile(navLinks) {
+    navLinks.classList.remove("active");
+}
+
+function alternarMenuMobile(navLinks) {
+    navLinks.classList.toggle("active");
+}
+
+function configurarMenuMobile() {
+    const botaoMenu = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (!botaoMenu || !navLinks) {
+        return;
+    }
+
+    botaoMenu.addEventListener("click", () => {
+        alternarMenuMobile(navLinks);
+    });
+
+    const linksDoMenu = navLinks.querySelectorAll("a");
+
+    linksDoMenu.forEach((link) => {
+        link.addEventListener("click", () => {
+            fecharMenuMobile(navLinks);
+        });
+    });
+}
+
+function inicializarSite() {
+    configurarFechamentoModal();
+    configurarScrollHeader();
+    configurarMenuMobile();
+}
+
+inicializarSite();
