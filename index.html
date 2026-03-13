@@ -217,7 +217,7 @@
                 </div>
 
                 <div class="portfolio-grid">
-                    <article class="portfolio-item">
+                    <article class="portfolio-item" tabindex="0" role="button" aria-label="Ampliar imagem de Direção Criativa">
                         <img
                             src="assets/img/servico-1.jpg"
                             alt="Direção de conteúdo"
@@ -228,7 +228,7 @@
                         </div>
                     </article>
 
-                    <article class="portfolio-item story">
+                    <article class="portfolio-item story" tabindex="0" role="button" aria-label="Ampliar imagem de Stories e Campanhas">
                         <img
                             src="assets/img/servico-2.jpg"
                             alt="Story estratégico"
@@ -239,7 +239,7 @@
                         </div>
                     </article>
 
-                    <article class="portfolio-item">
+                    <article class="portfolio-item" tabindex="0" role="button" aria-label="Ampliar imagem de Branding Visual">
                         <img
                             src="assets/img/servico-3.jpg"
                             alt="Branding visual"
@@ -250,7 +250,7 @@
                         </div>
                     </article>
 
-                    <article class="portfolio-item">
+                    <article class="portfolio-item" tabindex="0" role="button" aria-label="Ampliar imagem de Posts Estratégicos">
                         <img
                             src="assets/img/servico-4.jpg"
                             alt="Posts estratégicos"
@@ -385,83 +385,142 @@
             <div class="container py-80">
                 <div class="section-header">
                     <span class="section-badge">Planos e soluções</span>
-                    <h2 class="section-title">Nossos Planos</h2>
+                    <h2 class="section-title">Nossos Produtos</h2>
                     <p class="section-subtitle">
                         Escolha a solução ideal para o momento da sua empresa e fortaleça
                         sua presença digital com estratégia, consistência e direção.
                     </p>
                 </div>
 
-                <div class="pricing-grid">
-                    <article class="price-card">
-                        <h3>Essencial</h3>
-                        <div class="price">R$ 500 - 700<span>/mês</span></div>
-                        <p class="plan-description">
-                            Para empresas que desejam começar a estruturar sua presença
-                            digital com mais clareza.
-                        </p>
-                        <ul>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Planejamento mensal</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> 8 posts para feed</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Legendas estratégicas</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> 8 roteiros de stories</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Direcionamento de posicionamento</li>
-                        </ul>
-                        <a
-                            href="https://wa.me/5583987917915?text=Olá!+Quero+saber+mais+sobre+o+Plano+Essencial"
-                            class="btn-plan"
-                            onclick="iniciarContato(event, this.href)"
-                        >
-                            Escolher Essencial
-                        </a>
-                    </article>
+                <div class="plans-carousel" aria-label="Carrossel de produtos">
+                    <button class="plans-nav plans-prev" type="button" aria-label="Ver produtos anteriores">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
 
-                    <article class="price-card featured">
-                        <div class="badge">Mais escolhido</div>
-                        <h3>Autoridade</h3>
-                        <div class="price">R$ 1.000<span>/mês</span></div>
-                        <p class="plan-description">
-                            Para marcas que querem comunicar valor com mais consistência e
-                            crescer com mais força.
-                        </p>
-                        <ul>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Planejamento estratégico completo</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> 12 posts + copy estratégica</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Stories semanais</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Direcionamento de gravação</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Relatório e reunião mensal</li>
-                        </ul>
-                        <a
-                            href="https://wa.me/5583987917915?text=Olá!+Quero+saber+mais+sobre+o+Plano+Autoridade"
-                            class="btn-plan"
-                            onclick="iniciarContato(event, this.href)"
-                        >
-                            Escolher Autoridade
-                        </a>
-                    </article>
+                    <div class="pricing-viewport">
+                        <div class="pricing-grid">
+                            <article class="price-card">
+                                <h3>Individual</h3>
+                                <div class="price">R$ 250<span>/pagamento único</span></div>
+                                <p class="plan-description">
+                                    Para quem deseja uma análise pontual e estratégica para melhorar seu perfil.
+                                </p>
+                                <ul>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Análise de Perfil</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Sugestões de @</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Sugestões Bio</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Dicas de Destaques</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> +10 dicas de conteúdo</li>
+                                </ul>
+                                <a
+                                    href="https://wa.me/5583987917915?text=Olá!+Quero+saber+mais+sobre+o+Pacote+Individual"
+                                    class="btn-plan"
+                                    onclick="iniciarContato(event, this.href)"
+                                >
+                                    Quero analisar meu perfil
+                                </a>
+                            </article>
 
-                    <article class="price-card">
-                        <h3>Premium</h3>
-                        <div class="price">R$ 1.500<span>/mês</span></div>
-                        <p class="plan-description">
-                            Para empresas que buscam uma atuação mais completa,
-                            estratégica e orientada a resultado.
-                        </p>
-                        <ul>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Gestão completa + estratégia de funil</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Tráfego pago incluso</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> 16+ conteúdos mensais</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Reels estratégicos</li>
-                            <li><i class="fas fa-check" aria-hidden="true"></i> Gestão de autoridade e concorrência</li>
-                        </ul>
-                        <a
-                            href="https://wa.me/5583987917915?text=Olá!+Quero+saber+mais+sobre+o+Plano+Premium"
-                            class="btn-plan"
-                            onclick="iniciarContato(event, this.href)"
-                        >
-                            Escolher Premium
-                        </a>
-                    </article>
+                            <article class="price-card">
+                                <h3>Essencial</h3>
+                                <div class="price">R$ 500 - 700<span>/mês</span></div>
+                                <p class="plan-description">
+                                    Para empresas que desejam começar a estruturar sua presença digital com mais clareza.
+                                </p>
+                                <ul>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Planejamento mensal</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> 8 posts feed</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Legendas estratégicas</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> 8 roteiros de stories</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Direcionamento de posicionamento</li>
+                                </ul>
+                                <a
+                                    href="https://wa.me/5583987917915?text=Olá!+Quero+saber+mais+sobre+o+Pacote+Essencial"
+                                    class="btn-plan"
+                                    onclick="iniciarContato(event, this.href)"
+                                >
+                                    Quero começar minha presença digital
+                                </a>
+                            </article>
+
+                            <article class="price-card featured">
+                                <div class="badge">Mais escolhido</div>
+                                <h3>Estratégico</h3>
+                                <div class="price">R$ 1.000<span>/mês</span></div>
+                                <p class="plan-description">
+                                    Para marcas que querem comunicar valor com mais consistência e crescer com mais força.
+                                </p>
+                                <ul>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Planejamento estratégico completo</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> 12 posts</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Copy estratégica</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Stories semanais</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Direcionamento de gravação</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Relatório mensal</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Reunião estratégica mensal</li>
+                                </ul>
+                                <a
+                                    href="https://wa.me/5583987917915?text=Olá!+Quero+saber+mais+sobre+o+Pacote+Estratégico"
+                                    class="btn-plan"
+                                    onclick="iniciarContato(event, this.href)"
+                                >
+                                    Quero crescer com estratégia
+                                </a>
+                            </article>
+
+                            <article class="price-card">
+                                <h3>Premium</h3>
+                                <div class="price">R$ 1.500<span>/mês</span></div>
+                                <p class="plan-description">
+                                    Para empresas que buscam uma atuação mais completa,
+                                    estratégica e orientada a resultado.
+                                </p>
+                                <ul>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Gestão completa</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Estratégia de funil</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Tráfego pago</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> 16+ conteúdos</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Reels estratégicos</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Gestão de autoridade</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Análise de concorrência</li>
+                                </ul>
+                                <a
+                                    href="https://wa.me/5583987917915?text=Olá!+Quero+saber+mais+sobre+o+Pacote+Premium"
+                                    class="btn-plan"
+                                    onclick="iniciarContato(event, this.href)"
+                                >
+                                    Quero gestão completa
+                                </a>
+                            </article>
+
+                            <article class="price-card">
+                                <h3>Avulsos</h3>
+                                <div class="price">Sob consulta<span>/personalizado</span></div>
+                                <p class="plan-description">
+                                    Serviços e soluções contratados de forma avulsa, conforme a necessidade da sua empresa.
+                                </p>
+                                <ul>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Estratégias</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Criação de conteúdo</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Edição de vídeo</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Criação de landing pages</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Criação de softwares</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Valores definidos por contato</li>
+                                </ul>
+                                <a
+                                    href="https://wa.me/5583987917915?text=Olá!+Quero+saber+mais+sobre+os+serviços+Avulsos"
+                                    class="btn-plan"
+                                    onclick="iniciarContato(event, this.href)"
+                                >
+                                    Quero uma solução sob medida
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+
+                    <button class="plans-nav plans-next" type="button" aria-label="Ver próximos produtos">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
         </section>
@@ -522,7 +581,7 @@
         </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- Modal contato -->
     <div id="modalObrigado" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -532,6 +591,16 @@
                 <p>Estamos te redirecionando para o nosso atendimento exclusivo.</p>
                 <div class="loader"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal portfolio -->
+    <div id="portfolioModal" class="image-modal" aria-hidden="true">
+        <button class="image-modal-close" type="button" aria-label="Fechar visualização da imagem">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        <div class="image-modal-content">
+            <img id="portfolioModalImage" src="" alt="Visualização ampliada da entrega">
         </div>
     </div>
 
